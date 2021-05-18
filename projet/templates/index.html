@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Météo ESME</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/main.css')}}">
+    </head>
+   
+    
+    <body>
+        <div class="topnav">
+            <a class="active" href="#home">Acceuil</a>
+            <a href="#news">Flask</a>
+            <a href="{{url_for('static', filename='contact.html')}}">Contact</a>
+            <a href="{{url_for('static', filename='en_savoir_plus.html')}}">En savoir plus</a>
+         </div>
+        
+        <div class="titre">NAVIGATEUR METEOROLOGIQUE</div>
+        
+        <div class="sun"></div>
+        
+        <div class="box">
+            <form action="/meteo" method="POST">
+                <div class="case">
+                    <div class="label_box">
+                        <label for="ville">Ville recherchée :</label>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" name="ville">
+                    </div>
+                </div>
+
+            <button class="button" type="submit"><span>Lancer la recherche</span></button>
+            
+        </form>
+        </div>
+        
+        <div id="background-wrap">
+            <div class="x1">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x2">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x3">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x4">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x5">
+                <div class="cloud"></div>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
